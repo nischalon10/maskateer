@@ -4,13 +4,17 @@ let imageModel = 'https://teachablemachine.withgoogle.com/models/mhyGtGcss/'
 let flippedVideo;
 let label = "";
 let count = 0;
+let font;
+let bbox;
 
 function preload(){
   classifier = ml5.imageClassifier(imageModel + 'model.json');
-  }
+  font = loadFont('./assets/Regular.otf');
+}
+
 function setup() {
-  let cnv = createCanvas(windowWidth/2 - 100, windowHeight - 40); // creates a preview window
-  cnv.position(windowWidth/2);
+  let cnv = createCanvas(windowWidth/3, windowHeight / 2); // creates a preview window
+  cnv.parent('myContainer');
   video = createCapture(VIDEO); // accesses my laptops camera
   video.size((windowWidth/3),(windowHeight / 2)); // dimensions of the video window
   video.hide(); // hides the dual camera if the device has one
@@ -18,10 +22,13 @@ function setup() {
   flippedVideo = ml5.flipImage(video);
   classifyVideo();
 }
+
 function draw() {
   background(500);
-  image(flippedVideo, width/10, height/8); // flips the video preview
-  fill("red"); // the colour of the text
+  image(flippedVideo, 0, 0); // flips the video preview
+  
+  fill(0);
+  noStroke();
   textSize(30);
   textAlign(10);
   text(label, (windowWidth/10 + (windowWidth/50)), height-(height/6))
@@ -37,9 +44,9 @@ function gotResult(error,results){
     return;
   } 
   label = results[0].label;
-  console.log(results);
   classifyVideo();
 }
+
 function getImage(){
   var imgLink = window.prompt("Image URL:")
   document.getElementById("image").setAttribute('src',imgLink);  
