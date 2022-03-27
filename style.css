@@ -10,13 +10,11 @@ canvas {
  background-color: brown;
 }
 
-#image{
-  position: absolute ;
-  margin-left: 15%;
-  margin-top: 5%;
+#myContainer{
+  display: inline-block;
+  border: 1em solid black;
 }
 
-
-#myContainer{
-  border: 1em solid black;
+label{
+  display: block;
 }

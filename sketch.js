@@ -26,12 +26,7 @@ function setup() {
 function draw() {
   background(500);
   image(flippedVideo, 0, 0); // flips the video preview
-  
-  fill(0);
-  noStroke();
-  textSize(30);
-  textAlign(10);
-  text(label, (windowWidth/10 + (windowWidth/50)), height-(height/6))
+  document.getElementById("callout").innerHTML = label;
 }
 function classifyVideo(){
   flippedVideo = ml5.flipImage(video);
@@ -48,6 +43,7 @@ function gotResult(error,results){
 }
 
 function getImage(){
-  var imgLink = window.prompt("Image URL:")
+  // var imgLink = window.prompt("Image URL:");
+  var imgLink = 'https://bullsconnect.usf.edu/downloads/screenshots/27CC99954D2F23F6DD98AF4777ECF9.jpg';
   document.getElementById("image").setAttribute('src',imgLink);  
 }
