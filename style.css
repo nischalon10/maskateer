@@ -25,13 +25,25 @@ img{
   object-position: 0 0;
 }
 
-label{
-  display: block;
-}
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 1em;
+}
 
+.callout-box{
+  display: block;
+  padding: 1em;
+  background-color: aqua;
+}
+
+.innerWrapper{
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  row-gap: 1em;
+}
+
+#callout{
+  display: grid;
 }
