@@ -1,6 +1,6 @@
 let classifier;
 let video;
-let imageModel = 'https://teachablemachine.withgoogle.com/models/Msdueb1Z_/'
+let imageModel = 'https://teachablemachine.withgoogle.com/models/58uKOiqW3/'
 let flippedVideo;
 let label = "";
 let count = 0;
