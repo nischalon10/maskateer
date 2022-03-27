@@ -1,11 +1,10 @@
 let classifier;
 let video;
-let imageModel = 'https://teachablemachine.withgoogle.com/models/mhyGtGcss/'
+let imageModel = 'https://teachablemachine.withgoogle.com/models/Msdueb1Z_/'
 let flippedVideo;
 let label = "";
 let count = 0;
 let font;
-let bbox;
 
 function preload(){
   classifier = ml5.imageClassifier(imageModel + 'model.json');
@@ -26,7 +25,8 @@ function setup() {
 function draw() {
   background(500);
   image(flippedVideo, 0, 0); // flips the video preview
-  document.getElementById("callout").innerHTML = label;
+  document.getElementById("callout-box").innerHTML = label;
+  if (label=='Class 1'){document.getElementById("callout-box").setAttribute('class',"alert alert-success")}
 }
 function classifyVideo(){
   flippedVideo = ml5.flipImage(video);

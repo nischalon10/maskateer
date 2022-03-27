@@ -12,9 +12,26 @@ canvas {
 
 #myContainer{
   display: inline-block;
+  
+  
   border: 1em solid black;
+}
+
+img{
+  width: 59.388038943vh;
+  height: 100vh;
+  overflow-x: hidden;
+  object-fit: cover;
+  object-position: 0 0;
 }
 
 label{
   display: block;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1em;
+
 }
