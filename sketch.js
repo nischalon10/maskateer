@@ -44,5 +44,8 @@ function gotResult(error,results){
 
 function getImage(){
   var imgLink = window.prompt("Image URL:");
+  if (imgLink == ''){
+    imgLink = 'https://i.postimg.cc/XYnyWzCT/qrcode.png';
+  }
   document.getElementById("image").setAttribute('src',imgLink);  
 }
