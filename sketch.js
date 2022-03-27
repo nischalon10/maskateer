@@ -26,12 +26,12 @@ function setup() {
 function draw() {
   background(500);
   image(flippedVideo, 0, 0); // flips the video preview
-  
-  fill(0);
-  noStroke();
-  textSize(30);
-  textAlign(10);
-  text(label, (windowWidth/10 + (windowWidth/50)), height-(height/6))
+  // fill(0);
+  // noStroke();
+  // textSize(30);
+  // textAlign(10);
+  // text(label, (windowWidth/10 + (windowWidth/50)), height-(height/6))
+  document.getElementById('output').innerHTML = label;
 }
 function classifyVideo(){
   flippedVideo = ml5.flipImage(video);
