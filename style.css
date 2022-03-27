@@ -7,14 +7,19 @@ canvas {
 }
 
 #defaultCanvas0{
- background-color: brown;
+ background-color: #001a70;
 }
 
 #myContainer{
   display: inline-block;
-  
-  
-  border: 1em solid black;
+  padding: 1em;
+  box-shadow:  5px 5px 10px #011e6da9,
+  -5px -5px 10px #ffffff;
+  border-radius: 2em;
+}
+
+canvas{
+  border-radius: 1.5em;
 }
 
 img{
@@ -23,19 +28,26 @@ img{
   overflow-x: hidden;
   object-fit: cover;
   object-position: 0 0;
+  border-radius: 1em;
 }
 
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 1em;
+  grid-template-columns: .1fr 1fr 2fr .1fr;
+  column-gap: .2fr;
 }
 
-.callout-box{
+#callout-box{
   display: block;
   padding: 1em;
-  background-color: aqua;
+  font-family: Arial;
+  font-size: 250%;
+  border-radius: 1em;
+  color: #001a70;
+  /* background-color: #0044ff52; */
+  box-shadow:  -5px -5px 5px #ffffff inset,
+             5px 5px 5px #011e6da9 inset;
 }
 
 .innerWrapper{
@@ -44,6 +56,15 @@ img{
   row-gap: 1em;
 }
 
-#callout{
-  display: grid;
+#relay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#whitespace{
+  text-align: center;
+  justify-content: center;
+}
+
+
