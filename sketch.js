@@ -43,7 +43,7 @@ function gotResult(error,results){
 }
 
 function getImage(){
-  // var imgLink = window.prompt("Image URL:");
-  var imgLink = 'https://bullsconnect.usf.edu/downloads/screenshots/27CC99954D2F23F6DD98AF4777ECF9.jpg';
+  var imgLink = window.prompt("Image URL:");
+  // var imgLink = 'https://bullsconnect.usf.edu/downloads/screenshots/27CC99954D2F23F6DD98AF4777ECF9.jpg';
   document.getElementById("image").setAttribute('src',imgLink);  
 }

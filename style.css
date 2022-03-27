@@ -67,4 +67,10 @@ img{
   justify-content: center;
 }
 
+h1{
+  font-family: Helvetica;
+  color: #cecece;
+  background-color: #001a70;
+  border-radius: 50vh;
+}
 
