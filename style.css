@@ -1,0 +1,17 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+#defaultCanvas0{
+ background-color: brown;
+}
+
+#image{
+  position: absolute ;
+  margin-left: 15%;
+  margin-top: 5%;
+}
